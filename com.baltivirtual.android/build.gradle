@@ -1,0 +1,44 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+group = 'com.github.BaltiVirtual'
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName '0.0.2'
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile files('libs/AVProVideo.jar')
+    compile files('libs/unity-classes.jar')
+    compile files('libs/Vuforia.jar')
+    compile files('libs/VuforiaUnityPlayer.jar')
+    compile files('libs/zip_file.jar')
+}
+
+task includeSource(type: Copy) {
+
+    def source = "$projectDir/src/main/java/com/balti/virtual/appar8/UnityPlayerActivity.java"
+    def dest = "$projectDir/src/main/res/raw/"
+
+    from source
+    into dest
+
+    doLast {
+        file("$projectDir/src/main/res/raw/UnityPlayerActivity.java").renameTo("$projectDir/src/main/res/raw/source.txt")
+    }
+}
+
+clean.dependsOn includeSource

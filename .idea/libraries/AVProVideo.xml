@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AVProVideo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/com.baltivirtual.android/libs/AVProVideo.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
