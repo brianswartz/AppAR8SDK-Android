@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<settings name="AppSettings" vumark_target="false" pretty_name="" load_on_startup="true" show_in_holodex="false" hide_until_seen="true" minimum_age="0" revision="23" min_version="3.0" server_url="https://appar8.s3.dualstack.us-east-1.amazonaws.com/app/v3" app_store_url="https://itunes.apple.com/us/app/holotats/id1266840123?mt=8" play_store_url="https://play.google.com/store/apps/details?id=com.balti.virtual.appar8" app_text_ios="Go to the App Store store to get the latest version and leave a good review." app_text_android="Go to the Google Play store to get the latest version and leave a good review." startup_failure_title="Something Went Wrong" startup_failure_text="Please check your internet connection and restart the app." no_internet_title="Could Not Connect To Server!" no_internet_text="Only previously scanned augmentations will be available." new_version_title="New Version Available!" new_version_text="Get the latest version to get the best experience. App may not work properly without updating." support_title="Get Support" support_text="Learn more at baltivirtual.com" support_url="http://www.baltivirtual.com" sample_title="Download a sample target." sample_text="Print out the sample sheet to use with AppAR8." sample_url="https://s3.amazonaws.com/appar8/app/v3/pub/sample.jpg" share_title="" share_text="" startup_video_url="" max_augmentations="2">
+		<augmentation xsi:type="BundleInstance" bundle_name="vuforia_max_targets">
+			<override override_type="set_transform_parent" execution_time="on_augmentation_loaded" combo_with="" combo_criteria="is_tracked" delay="0" one_time="false" target_name="" property_name="AppManager/MainCanvas" property_value="False" />
+		</augmentation>
+	</settings>
+	<bundles>
+		<bundle name="dev_mode" version_ios="7" version_android="3" include_in_build="true" size="8803" revision="12" />
+	</bundles>
+	<templates>
+		<template name="BaltiVirtual Carousel" revision="1">
+			<augmentation xsi:type="BundleInstance" bundle_name="bv_carousel" />
+			<augmentation xsi:type="BundleInstance" bundle_name="butterfly_alt" />
+			<augmentation xsi:type="BundleInstance" bundle_name="dragon" />
+		</template>
+	</templates>
+	<collections>
+		<collection description="" minimum_age="0" load_on_startup="true" show_in_holodex="false" vumark_collection="false" name="Development" version="2" include_in_build="true" revision="4">
+			<target name="test3" vumark_target="false" load_on_startup="false" show_in_holodex="true" hide_until_seen="true" minimum_age="0" revision="11">
+				<override override_type="set_orientation" execution_time="on_enabled" combo_with="" combo_criteria="is_tracked" delay="0" one_time="false" target_name="" property_name="face_camera_2d" property_value="False" />
+				<augmentation xsi:type="BundleInstance" bundle_name="olympic_runner" />
+			</target>
+			<target name="test2" vumark_target="false" load_on_startup="false" show_in_holodex="true" hide_until_seen="true" minimum_age="0" revision="16">
+				<augmentation xsi:type="BundleInstance" bundle_name="flappy_bird_test" />
+			</target>
+			<target name="test1" vumark_target="false" load_on_startup="false" show_in_holodex="true" hide_until_seen="true" minimum_age="0" revision="10">
+				<override override_type="set_orientation" execution_time="on_enabled" combo_with="" combo_criteria="is_tracked" delay="0" one_time="false" target_name="" property_name="face_up_3d" property_value="False" />
+				<augmentation xsi:type="BundleInstance" bundle_name="decalmania_grout_test" />
+			</target>
+			<target name="dev_mode" vumark_target="false" load_on_startup="false" show_in_holodex="true" hide_until_seen="true" minimum_age="0" revision="5">
+				<augmentation xsi:type="BundleInstance" bundle_name="dev_mode">
+					<override override_type="set_transform_parent" execution_time="on_enabled" combo_with="" combo_criteria="is_tracked" delay="0" one_time="false" target_name="Camera" property_name="AppManager/ARCamera/SceneCamera" property_value="False" />
+					<override override_type="set_transform_parent" execution_time="on_disabled" combo_with="" combo_criteria="is_tracked" delay="0" one_time="false" target_name="AppManager/ARCamera/SceneCamera/Camera" property_name="" property_value="False" />
+				</augmentation>
+			</target>
+		</collection>
+	</collections>
+</AppData>

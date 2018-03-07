@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="77b34193-5a72-4200-bed4-0494711180d5" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/com.baltivirtual.android/com.baltivirtual.android.iml" afterPath="$PROJECT_DIR$/com.baltivirtual.android/com.baltivirtual.android.iml" />
-    </list>
+    <list default="true" id="77b34193-5a72-4200-bed4-0494711180d5" name="Default" comment="" />
     <ignored path="AppAR8SDK-Android.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
